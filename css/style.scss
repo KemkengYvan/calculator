@@ -1,0 +1,194 @@
+$bg_boxtheme1: #252d44;
+$bg_basicF_theme1: #252d44d0;
+$bg_theme1: #3b4664da;
+$bg_screen1: #181f32;
+$bg_actionBtn1: #647299;
+$bg_outputBtn1: #c85401;
+$bg_wrapperTheme1: #252d44;
+$bg_basicFunction1: #252d44;
+$shadow_outputBtn1: #902418;
+$shadow_actionBtn1: #3f4b6c;
+$color_dark1: #343429;
+$color_light1: #fcfefc;
+@mixin letter($color, $size) {
+  font-family: "Spartan", sans-serif;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin flexBox($type, $direction, $align, $justify) {
+  display: $type;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+body#theme1 {
+  background-color: $bg_theme1;
+  header {
+    h1 {
+      color: $color_light1;
+      font-size: 3rem;
+    }
+    .switch-style {
+      span {
+        color: $color_light1;
+      }
+      .switch-box {
+        background-color: $bg_wrapperTheme1;
+        .switch-button {
+          background-color: $bg_outputBtn1;
+        }
+      }
+    }
+  }
+  main {
+    .screen {
+      background-color: $bg_screen1;
+    }
+    .basic-functions {
+      background-color: $bg_basicFunction1;
+    }
+  }
+}
+
+body {
+  transition: 1s ease;
+  font-size: 50%;
+}
+
+header {
+  @include flexBox(flex, row, center, center);
+  background-color: transparent;
+  min-width: 43em;
+  max-width: 43em;
+  margin: auto;
+  margin-top: 5%;
+  h1 {
+    display: block;
+    width: 50%;
+    @include letter(#fff, 1.5rem);
+  }
+  
+}
+
+main {
+  @include flexBox(flex, column, center, center);
+  background-color: transparent;
+  margin: auto;
+  .screen {
+    @include flexBox(flex, column, flex-end, center);
+    width: 43em;
+    padding: 1em;
+    border-radius: 15px;
+    transition: 1s ease;
+    .historial {
+      @include letter(rgb(238, 229, 229), 1rem);
+    }
+    input[type="text"] {
+      display: block;
+      width: 90%;
+      text-align: end;
+      margin: auto;
+      padding: 0.3em;
+      @include letter(#fff, 2.5rem);
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+  }
+  .basic-functions {
+    display: grid;
+    grid-template-columns: repeat(4, 4rem);
+    grid-template-rows: repeat(5, 2rem);
+    gap: 1rem;
+    margin-top: 2em;
+    border-radius: 15px;
+    transition: 1s ease;
+    padding: 3em;
+    button {
+      width: 100%;
+      @include letter(#585a64, 1.5rem);
+      padding: .5em;
+      box-shadow: 0 0.19em 0em #a99c97;
+      border-radius: 5px;
+      font-size: 1.3rem;
+      border: none;
+      text-align: center;
+      cursor: pointer;
+    }
+    .col {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    #del,
+    #reset {
+      display: block;
+      text-align: center;
+      background-color: #647299;
+      font-size: 1.3rem;
+      color: #fff;
+      box-shadow: 0 0.19em 0em #4e5a81;
+    }
+    #output {
+      display: block;
+      background-color: #d13f30;
+      color: #fff;
+      font-size: 1.3rem;
+      box-shadow: 0 0.19em 0em #902418;
+    }
+    .btnNum {
+      display: block;
+      background-color: #eae3db;
+    }
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+      grid-column: 1/5;
+      grid-row: 6/6;
+    }
+  }
+}
+footer {
+  .attribution {
+    color: rgb(255, 255, 255);
+    font-size: 11px;
+    text-align: center;
+    padding: 1.6em;
+  }
+  .attribution a {
+    @include letter(#ff0, 1rem);
+  }
+}
+
+
+
+@media (max-width: 500px) {
+  footer {
+    .attribution {
+      font-size: 11px;
+      padding: 1.6em;
+    }
+    .attribution a {
+      color: #ff0;
+      font-size: 11px;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  header {
+    min-width: 40em;
+    max-width: 40em;
+  }
+  main {
+    width: 40em;
+    .screen {
+      width: 45em;
+    }
+  }
+}
