@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />-->
+  <link rel="stylesheet" href="./css/yvan/css/style.min.css">
+  <title>Calc</title>
+</head>
+
+<body>
+  <header>
+    <h1>Calculator</h1>
+
+  </header>
+
+  <main>
+    <div class="screen">
+      <div class="historial"></div>
+
+      <input type="text" class="result" aria-label="output" placeholder="0" disabled />
+    </div>
+    <div id="scientific">
+      <div class="basic-functions">
+        <div id="bases" class="uses">
+          <button value="normal" style="font-weight: bold;">Norm</button>
+          <button value="bin">bin</button>
+          <button value="oct">oct</button>
+          <button value="hex">hex</button>
+          <button value="dec">dec</button>
+        </div>
+
+        <div id="powers" class="uses">
+          <button value="power">^</button>
+          <button value="√">√</button>
+          <button value="factorial">n!</button>
+          <button value="e">e</button>
+          <button value="mod">%</button>
+        </div>
+
+        <div id="trigonometry" class="uses">
+          <button value="sin">sin</button>
+          <button value="cos">cos</button>
+          <button value="tan">tan</button>
+          <button value="log">log</button>
+          <button value="In">In</button>
+        </div>
+                
+        <div class="uses" id="seven">
+          <button value="7">7</button>
+          <button value="8">8</button>
+          <button value="9">9</button>
+          <button id="reset" value="reset">AC</button>
+          <button id="del" value="del">DEL</button>
+        </div>
+        <div class="uses" id="four">
+          <button value="4">4</button>
+          <button value="5">5</button>
+          <button value="6">6</button>
+          <button value="+">+</button>
+          <button value="-">-</button>
+        </div>
+        <div class="uses" id="one">
+          <button value="1">1</button>
+          <button value="2">2</button>
+          <button value="3">3</button>
+          <button value="*">x</button>
+          <button value="/">/</button>
+        </div>
+        <div id="equal">
+          <button value="0">0</button>
+          <button value=".">.</button>
+          <button id="output" value="output" aria-label="output">=</button>
+          <input type="text" id="time" aria-label="time" disabled />
+        </div>
+      </div>
+    </div>
+    <div id="normal">
+      <div class="basic-functions">
+        <div class="col">
+          <button class="btnNum" value="7">7</button>
+          <button class="btnNum" value="4">4</button>
+          <button class="btnNum" value="1">1</button>
+          <button class="symbolType" value="." aria-label="decimal">.</button>
+        </div>
+        <div class="col">
+          <button class="btnNum" value="8">8</button>
+          <button class="btnNum" value="5">5</button>
+          <button class="btnNum" value="2">2</button>
+          <button class="btnNum" value="0">0</button>
+        </div>
+        <div class="col">
+          <button class="btnNum" value="9">9</button>
+          <button class="btnNum" value="6">6</button>
+          <button class="btnNum" value="3">3</button>
+          <button class="symbolType" value="/">/</button>
+        </div>
+        <div class="col">
+          <button class="symbolType" id="del" value="del" aria-label="delete">DEL</button>
+          <button class="symbolType" value="+">+</button>
+          <button class="symbolType" value="-">-</button>
+          <button class="symbolType" value="*">x</button>
+        </div>
+        <div class="buttons">
+          <button id="reset" value="reset">AC</button>
+          <button id="del" value="scientific" aria-label="scientific">SC</button>
+          <button id="output" value="output" aria-label="output">=</button>
+          <input type="text" id="time1" aria-label="time" disabled />
+        </div>
+      </div>
+  </main>
+
+
+  <footer>
+    <div class="attribution"> Designed and coded by Kemkeng Yvan</div>
+  </footer>
+  <script src="./ts-built/index.js"></script>
+
+</body>
+
+</html>

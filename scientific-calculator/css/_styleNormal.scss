@@ -1,0 +1,70 @@
+main #normal{
+    .basic-functions {
+        display: grid;
+        grid-template-columns: repeat(4, 4rem);
+        grid-template-rows: repeat(5, 2rem);
+        gap: 1rem;
+        margin-top: 2em;
+        border-radius: 15px;
+        transition: 1s ease;
+        padding: 3em;
+        button {
+          width: 100%;
+          @include letter(#585a64, 1.5rem);
+          padding: .5em;
+          box-shadow: 0 0.19em 0em #a99c97;
+          border-radius: 5px;
+          font-size: 1.3rem;
+          border: none;
+          text-align: center;
+          cursor: pointer;
+        }
+        .col {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+        #del,
+        #reset {
+          display: block;
+          text-align: center;
+          background-color: #647299;
+          font-size: 1.3rem;
+          color: #fff;
+          box-shadow: 0 0.19em 0em #4e5a81;
+        }
+        #output {
+          display: block;
+          background-color: #d13f30;
+          color: #fff;
+          font-size: 1.3rem;
+          box-shadow: 0 0.19em 0em #902418;
+        }
+        .btnNum {
+          display: block;
+          background-color: #eae3db;
+        }
+        .buttons {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          margin-top: 1rem;
+          grid-column: 1/5;
+          grid-row: 6/6;
+          button{
+            width: 40%;
+          }
+          input{
+            border-radius: 10px;
+            width: 100%;
+            background-color: white;
+            text-align: end;
+            font-size: 18px;
+            padding-top: 5px;
+          }
+        }
+      }
+    
+}
